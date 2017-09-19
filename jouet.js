@@ -8,7 +8,7 @@ class Jouet {
     }
 
     get libelle(){
-        return this.libelle;
+        return this._libelle;
     }
     get trancheAge(){
         return this._trancheAge.toString();
