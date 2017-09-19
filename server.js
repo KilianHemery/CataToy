@@ -8,3 +8,6 @@ console.log(unJouet.libelle);
 
     let tranche25 =  new TrancheAge("tranche25",2,5);
 console.log(tranche25.toString());
+
+let unJouet = new Jouet("Draisienne junior bleue",tranche25);
+console.log(unJouet.trancheAge);
