@@ -1,6 +1,7 @@
 class Jouet {
 
-    constructor(unLibelle,uneTrancheAge,uneCategorie){
+    constructor(unId,unLibelle,uneTrancheAge,uneCategorie){
+        this._id = unId;
         this._libelle = unLibelle;
         this._trancheAge = uneTrancheAge;
         this._categorie = uneCategorie;
@@ -15,6 +16,10 @@ class Jouet {
     }
     get categorie(){
         return this._categorie.libelle;
+    };
+
+    convenir(unAge){
+        return (unAge >= this._trancheAge.ageMin) && (unAge <= this._trancheAge.ageMax)
     }
 
 }
