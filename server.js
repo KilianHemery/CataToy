@@ -8,6 +8,9 @@ const Categorie = require('./categorie.js');
 
 const app = express();
 
+app.set('views','./views');
+app.set('view engine','pug');
+
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
@@ -43,7 +46,7 @@ lesJouets.push(unJouet3);
 
 app.get('/', function (req, res) {
     let responseText = 'Bienvenue dans le catalogue de jouet';
-    res.send(responseText);
+    res.render('index',{message : responseText});
 });
 
 //affiche tous les jouets
