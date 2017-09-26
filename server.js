@@ -7,13 +7,13 @@ const TrancheAge = require('./trancheAge.js');
 const Categorie = require('./categorie.js');
 
 // DONNEES
-let tranche02 =  new TrancheAge("tranche02",0,2);
-let tranche25 =  new TrancheAge("tranche25",2,5);
-let tranche48 =  new TrancheAge("tranche48",4,8);
+let tranche02 =  new TrancheAge(1,"tranche02",0,2);
+let tranche25 =  new TrancheAge(2,"tranche25",2,5);
+let tranche48 =  new TrancheAge(3,"tranche48",4,8);
 
-let categorie1 = new Categorie("Plein Air");
-let categorie2 = new Categorie("Jeux d'imagination");
-let categorie3 = new Categorie("Jeux d'eveil");
+let categorie1 = new Categorie(1,"Plein Air");
+let categorie2 = new Categorie(2,"Jeux d'imagination");
+let categorie3 = new Categorie(3,"Jeux d'eveil");
 
 let lesJouets = [];
 let unJouet1 = new Jouet(1,"Draisienne junior bleue",tranche25,categorie1);
@@ -43,19 +43,19 @@ app.get('/jouets',
             responseText += 'Ajout d\'un nouveau jouet </br>';
             responseText += '<form action="/jouets" method="post">';
             responseText += 'Libelle :<br>';
-            responseText += '<input type="text" name="libelle" value=""><br>';
+            responseText += '<input type="text" name="libelle" value=""><br><br>';
             responseText += 'Categorie :<br>';
             responseText += '<select>';
             responseText += `<option value="cat1"> ${categorie1.libelle}</option>`;
             responseText += `<option value="cat2"> ${categorie2.libelle}</option>`;
             responseText += `<option value="cat3"> ${categorie3.libelle}</option>`;
-            responseText +='</select><br>';
+            responseText +='</select><br><br>';
             responseText += 'Tranche d\'âge :<br>';
             responseText += '<select>';
             responseText += `<option value="t02"> ${tranche02.toString()}</option>`;
             responseText += `<option value="t25"> ${tranche25.toString()}</option>`;
             responseText += `<option value="t48"> ${tranche48.toString()}</option>`;
-            responseText +='</select><br>';
+            responseText +='</select><br><br>';
             responseText += '<input type="submit" value="Envoyer">';
             responseText += '</form>';
 

@@ -1,10 +1,11 @@
 class TrancheAge {
 
-   constructor(libelle,ageMin,ageMax){
-                this._libelle = libelle;
-                this._ageMax = ageMax;
-                this._ageMin = ageMin;
-            }
+   constructor(id,libelle,ageMin,ageMax){
+       this._id = id;
+       this._libelle = libelle;
+       this._ageMax = ageMax;
+       this._ageMin = ageMin;
+   }
 
     get libelle(){
                 return this._libelle;
